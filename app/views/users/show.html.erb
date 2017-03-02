@@ -3,4 +3,15 @@
   <%= @user.name %>
 </h1>
 
+  名前:<%= @user.name %>
+  <br>
+  メールアドレス:<%= @user.email %>
+  <br>
+  <% if !!@user.address %>
+   住所：未入力
+  <% else %>
+  住所:<%= @user.address %>
+  <% end %>
+<br>
 <%= link_to "Edit plofile", edit_user_path(@user) %>
+
