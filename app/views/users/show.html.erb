@@ -5,6 +5,8 @@
 
   名前:<%= @user.name %>
   <br>
+  パスワード:<%= @user.password %>
+  <br>
   メールアドレス:<%= @user.email %>
   <br>
   <% if @user.address? %>
@@ -13,5 +15,5 @@
   住所:未入力
 <% end %>
 <br>
-<%= link_to "Edit plofile", edit_user_path(@user) %>
+<%= link_to "Edit profile", edit_user_path(@user) %>
 
