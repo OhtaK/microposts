@@ -7,11 +7,11 @@
   <br>
   メールアドレス:<%= @user.email %>
   <br>
-  <% if !!@user.address %>
-   住所：未入力
-  <% else %>
+  <% if @user.address? %>
   住所:<%= @user.address %>
-  <% end %>
+  <% else %>
+  住所:未入力
+<% end %>
 <br>
 <%= link_to "Edit plofile", edit_user_path(@user) %>
 
