@@ -5,7 +5,11 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
+      <%= link_to "Edit plofile", edit_user_path(@user) %><br>
+      <%= link_to "followings", followings_user_path(@user) %><br>
+      <%= link_to "followed", followers_user_path(@user) %><br>
     </section>
+    
   </aside>
   <div class="col-md-8">
     <%= render 'follow_form' if logged_in? %>

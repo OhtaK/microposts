@@ -1,0 +1,13 @@
+<section class="follow_info">
+      
+      <h2>
+          フォローしている人
+      <br>
+       <% @followings.each do |following| %>
+        <%= gravatar_for following %>
+        <%= following.name %>
+       <% end %>
+      </h2>
+    </section>
+    
+    
