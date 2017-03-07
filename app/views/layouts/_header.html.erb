@@ -12,7 +12,12 @@
               Account <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
+              <% if logged_in? %>
               <li><%= link_to "Profile", current_user %></li>
+              <% else %>
+              <li><%= link_to "Profile", edit_root_path(@user) %></li>
+              <% end %>
+              
               <li><%= link_to "Settings", '#' %></li>
               <li class="divider"></li>
               <li>
