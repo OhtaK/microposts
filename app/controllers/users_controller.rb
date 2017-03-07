@@ -18,6 +18,23 @@ class UsersController < ApplicationController
     end
   end
   
+  def edit
+    @user=User.find(params[:id])
+    if(current_user!=@user)
+    redirect_to root_path
+    end
+  end
+  
+  def update
+    if current_user.update(user_params)
+      # 保存に成功した場合はユーザのページへリダイレクト
+      redirect_to current_user, notice: '詳細情報を編集しました'
+    else
+      # 保存に失敗した場合は編集画面へ戻す
+      render 'edit'
+    end
+  end
+  
   def followings
     @user = User.find(params[:id])
   @followings  =@user.following_users

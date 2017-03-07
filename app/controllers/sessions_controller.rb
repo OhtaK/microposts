@@ -19,8 +19,6 @@ class SessionsController < ApplicationController
     redirect_to root_path
   end
   
-  
-  
   def set_message
     @user = user.find(params[:id])
   end
