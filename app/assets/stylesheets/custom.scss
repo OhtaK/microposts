@@ -107,6 +107,7 @@ input {
 /* sidebar */
 
 aside {
+  
   section.user_info {
     margin-top: 20px;
   }
@@ -133,8 +134,10 @@ aside {
 }
 
 .gravatar {
-  float: left;
+  float: none;
   margin-right: 10px;
+  margin-bottom: 10px;
+  line-height: 10px;
 }
 
 /* microposts */
@@ -142,6 +145,7 @@ aside {
 .microposts {
   list-style: none;
   padding: 0;
+  
   li {
     padding: 10px 0;
     border-top: 1px solid #e8e8e8;
@@ -164,10 +168,13 @@ aside {
     margin-left: 60px;
   }
   .gravatar {
-    float: left;
+    float: none;
     margin-right: 10px;
+    margin-bottom: 10px;
     margin-top: 5px;
+    
   }
+  
 }
 
 aside {

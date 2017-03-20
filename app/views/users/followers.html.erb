@@ -1,11 +1,19 @@
 <section class="follower_info">
-      
+      <head>
+      <style type="text/css">
+<!--
+body {line-height: 200%;}
+-->
+</style>
+</head>
       <h2>
           フォローされている人
       <br>
        <% @followers.each do |follower| %>
         <%= gravatar_for follower %>
         <%= follower.name %>
+        <br>
        <% end %>
       </h2>
     </section>
+    
