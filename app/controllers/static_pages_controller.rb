@@ -6,3 +6,4 @@ class StaticPagesController < ApplicationController
     end
   end
 end
+#created feed
