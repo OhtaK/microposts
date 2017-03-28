@@ -1,11 +1,6 @@
-<% @feed_items.each do |feed_item|%>
-<% if feed_item != nil %>
+<% if @feed_items.any? %>
   <ol class="microposts">
-    <%= render feed_item %>
+    <%= render @feed_items %>
+    <%= paginate @feed_items %>
   </ol>
-<% else %>
- <ol class="microposts">
-   feed_item=feed is nothing
 <% end %>
-<% end%>
-<%= paginate @feed_items %>
